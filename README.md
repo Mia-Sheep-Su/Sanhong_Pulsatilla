@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# Sanhong\_Pulsatilla
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是一個使用 React、TypeScript 和 Vite 構建的前端專案，旨在展示白頭翁（Chinese bulbul）的相關資訊。專案採用模組化設計，具備良好的可維護性與擴展性。
 
-Currently, two official plugins are available:
+## 🔧 技術棧
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [React](https://react.dev/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Vite](https://vitejs.dev/)
+* [Lucide React](https://lucide.dev/)：用於 SVG 圖示
+* [React Router DOM](https://reactrouter.com/)：用於路由管理
+* [Swiper](https://swiperjs.com/) 或 [react-slick](https://react-slick.neostack.com/)：用於輪播展示
+* CSS Modules：用於樣式管理
 
-## Expanding the ESLint configuration
+## 📁 專案結構
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+├── public/                 # 公共資源
+├── src/                    # 原始碼
+│   ├── components/         # 可重用的元件
+│   ├── pages/              # 頁面元件
+│   ├── styles/             # CSS 模組
+│   ├── App.tsx             # 主應用元件
+│   └── main.tsx            # 入口文件
+├── .gitignore              # Git 忽略文件
+├── index.html              # HTML 模板
+├── package.json            # 項目配置
+├── tsconfig.json           # TypeScript 配置
+└── vite.config.ts          # Vite 配置
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🚀 快速開始
+
+### 安裝依賴
+
+```bash
+npm install
 ```
+
+
+
+### 啟動開發伺服器
+
+```bash
+npm run dev
+```
+
+
+
+預設情況下，開發伺服器會在 [http://localhost:5173/](http://localhost:5173/) 運行。
+
+## 📦 構建生產版本
+
+```bash
+npm run build
+```
+
+
+
+構建後的文件將輸出到 `dist/` 目錄，可部署到靜態服務器。
+
+## 📝 開發者
+
+* GitHub: [Mia-Sheep-Su](https://github.com/Mia-Sheep-Su)
