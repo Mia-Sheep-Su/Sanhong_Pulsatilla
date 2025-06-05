@@ -1,0 +1,102 @@
+.logo {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* 黑色弧形 */
+.logo::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 27px;
+    background: black;
+    border-radius: 65% 35% 100% 0% / 58% 60% 40% 42%;
+    top: 14px;
+    left: 14px;
+    transform: rotate(4deg);
+}
+
+/* 嘴巴 */
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    background: black;
+    top: 22px;
+    left: 39px;
+    border-radius: 36% 64% 100% 0% / 0% 100% 0% 100%;
+    transform: rotate(-16deg);
+}
+
+.logo-hand {
+    position: absolute;
+    width: 29px;
+    height: 17px;
+    background: white;
+    border-radius: 80% 20% 100% 0% / 60% 67% 33% 40%;
+    top: 19px;
+    left: 13.5px;
+    transform: rotate(4deg);
+}
+
+/* 眼睛圓點 */
+.logo-eye {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    top: 24px;
+    left: 29px;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .logo::before {
+        width: 3vw;
+        height: 2.85vw;
+        top: 1.5vw;
+        left: 1.5vw;
+        border-radius: 65% 35% 100% 0% / 58% 60% 40% 42%;
+        transform: rotate(4deg);
+    }
+
+    .logo::after {
+        width: 0.75vw;
+        height: 0.45vw;
+        top: 2.33vw;
+        left: 4.2vw;
+        border-radius: 36% 64% 100% 0% / 0% 100% 0% 100%;
+        transform: rotate(-16deg);
+    }
+
+    .logo-hand {
+        width: 3.1vw;
+        height: 1.8vw;
+        top: 1.95vw;
+        left: 1.46vw;
+        border-radius: 80% 20% 100% 0% / 60% 67% 33% 40%;
+        transform: rotate(4deg);
+    }
+
+    .logo-eye {
+        width: 0.6vw;
+        height: 0.6vw;
+        top: 2.58vw;
+        left: 3vw;
+    }
+}
